@@ -1,0 +1,211 @@
+/* Importar fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+/* Estilo header */
+header {
+  background-color: darkblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  width: 100px;
+  padding: 10px;
+}
+
+header nav ul {
+  font-family: DINProBold;
+  list-style: none;
+  padding-left: 0%;
+  margin-bottom: 0%;
+}
+
+header nav ul li {
+  align-items: center;
+  text-align: center;
+}
+
+header nav ul li a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Estilo footer */
+footer {
+  background-color: lightgrey;
+  padding: 3%;
+}
+
+.contenedor-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.derechos-footer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: darkslategrey;
+  align-items: center;
+}
+
+.media-footer {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  gap: 3%;
+}
+
+.logo {
+  border-radius: 25%;
+  padding: 5px;
+  width: 80px;
+}
+
+/* Productos */
+.grid-productos {
+  display: grid;
+  background-color: #3498db;
+  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card {
+  margin: 3px;
+  padding: 3px;
+  color: gray;
+}
+
+/* Main index */
+.grid-index {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 420px repeat(3, 320px);
+  gap: 20px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.card1,
+.card2,
+.card3 {
+  align-items: center;
+  text-align: center;
+}
+
+/* Media query desktop - (entre 768px y 1024px) */
+@media only screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+  header nav ul {
+    display: flex;
+    font-family: DINProBold;
+    list-style: none;
+    padding-right: 100px;
+  }
+
+  .grid-productos {
+    margin-top: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .card {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .contenedor-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 15%);
+    grid-template-rows: 30%;
+    justify-items: baseline;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  .logo-footer {
+    justify-self: baseline;
+  }
+
+  .derechos-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: darkslategrey;
+  }
+
+  .media-footer {
+    display: flex;
+    flex-direction: row;
+    padding-right: 5%;
+    gap: 3%;
+  }
+
+  .logo {
+    border-radius: 25%;
+    padding: 5px;
+    width: 80px;
+  }
+
+  .grid-index {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 420px 300px;
+    grid-template-areas:
+      "img1 img1 img1"
+      "card1 card2 card3";
+  }
+
+  .img1 {
+    grid-area: img1;
+  }
+  .card1 {
+    grid-area: card1;
+  }
+  .card2 {
+    grid-area: card2;
+  }
+  .card3 {
+    grid-area: card3;
+  }
+}
