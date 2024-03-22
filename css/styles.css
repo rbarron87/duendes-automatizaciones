@@ -8,14 +8,14 @@
   box-sizing: border-box;
 } */
 
-main {
+/* main {
   font-family: "Roboto", sans-serif;
 }
 
 h1 {
   color: darkblue;
   text-align: center;
-}
+} */
 
 /* Estilo header */
 /* header {
@@ -50,7 +50,7 @@ header nav ul li a {
 } */
 
 /* Estilo footer */
-footer {
+/* footer {
   background-color: lightgrey;
   padding: 3%;
 }
@@ -77,7 +77,7 @@ footer {
   flex-direction: row;
   justify-self: center;
   gap: 3%;
-}
+} */
 
 .logo {
   border-radius: 25%;

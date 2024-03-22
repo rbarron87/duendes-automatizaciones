@@ -12,6 +12,15 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
+main {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: darkblue;
+  text-align: center;
+}
+
 /*Header*/
 header {
   background-color: #1b1552;
@@ -24,33 +33,128 @@ header img {
   width: 100px;
   padding: 10px;
 }
-header nav ul {
+header .menu ul {
   font-family: DINProBold;
   list-style: none;
   padding-left: 0%;
   margin-bottom: 0%;
 }
-header nav ul li {
+header .menu ul li {
   align-items: center;
   text-align: center;
+  padding: 5px;
 }
-header nav ul li a {
+header .menu ul li:hover {
+  background-color: white;
+}
+header .menu ul li a {
   color: white;
   padding: 16px;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
 }
+header .menu ul li a:hover {
+  color: #1b1552;
+}
+header .menu ul .actual {
+  background-color: lightgray;
+}
+header .menu ul .actual a {
+  color: #1b1552;
+}
+
+.main-nosotros .banner {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.main-nosotros .banner .bg-image {
+  opacity: 0.5;
+  max-width: 100%;
+  height: auto;
+}
+.main-nosotros .banner .nosotros {
+  color: #1b1552;
+  font-size: 35px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.main-servicios .grid-servicios {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.main-servicios .grid-servicios img {
+  width: 80%;
+}
+
+/* Estilo footer */
+footer {
+  background-color: lightgrey;
+  padding: 5px;
+}
+footer .contenedor-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+footer .derechos-footer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: darkslategrey;
+  align-items: center;
+}
+footer .media-footer {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  gap: 3%;
+}
+footer .logo {
+  border-radius: 25%;
+  padding: 5px;
+  width: 80px;
+}
 
 /* Media queries */
-/* @media screen and (min-width: 1024px){} */
 @media screen and (min-width: 768px) {
+  .main-servicios .grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+}
+/* Media queries */
+@media screen and (min-width: 1024px) {
   header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-left: 10px;
   }
-  header nav ul {
+  header .menu ul {
     display: flex;
     font-family: DINProBold;
     list-style: none;
@@ -68,7 +172,7 @@ header nav ul li a {
     margin: 10px;
     padding: 5px;
   }
-  .contenedor-footer {
+  footer .contenedor-footer {
     display: grid;
     grid-template-columns: repeat(3, 15%);
     grid-template-rows: 30%;
@@ -77,10 +181,10 @@ header nav ul li a {
     justify-content: space-around;
     align-content: center;
   }
-  .logo-footer {
+  footer .logo-footer {
     justify-self: baseline;
   }
-  .derechos-footer {
+  footer .derechos-footer {
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -88,11 +192,28 @@ header nav ul li a {
     font-size: 16px;
     color: darkslategrey;
   }
-  .media-footer {
+  footer .media-footer {
     display: flex;
     flex-direction: row;
     padding-right: 5%;
     gap: 3%;
+  }
+  .main-nosotros .banner .nosotros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10%;
+    padding: 0 10% 0 10%;
+  }
+  .main-servicios .grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 15px;
   }
   .logo {
     border-radius: 25%;
