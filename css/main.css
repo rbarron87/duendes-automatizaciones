@@ -102,6 +102,22 @@ header .menu ul .actual a {
   width: 80%;
 }
 
+.main-productos .mt-4 .grid-productos {
+  margin-top: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+.main-productos .mt-4 .card {
+  margin: 10px;
+  padding: 5px;
+}
+.main-productos .mt-4 .card .card-img-top {
+  height: 80%;
+}
+
 /* Estilo footer */
 footer {
   background-color: lightgrey;
@@ -160,7 +176,7 @@ footer .logo {
     list-style: none;
     padding-right: 100px;
   }
-  .grid-productos {
+  .main-productos .mt-4 .grid-productos {
     margin-top: 20px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -168,9 +184,13 @@ footer .logo {
     justify-items: center;
     align-items: center;
   }
-  .card {
+  .main-productos .mt-4 .grid-productos .card {
     margin: 10px;
     padding: 5px;
+    width: 90%;
+  }
+  .main-productos .mt-4 .grid-productos .card .card-img-top {
+    height: 200px;
   }
   footer .contenedor-footer {
     display: grid;
